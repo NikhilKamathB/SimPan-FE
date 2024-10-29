@@ -1,9 +1,9 @@
 export default function Home() {
   return (
-    <div className="main-div">
+    <div className="main-container">
       <header className="main-header"></header>
       <div className="main-content">
-        <h1>Hello World!</h1>
+        <h1>Simpan</h1>
       </div>
       <footer className="main-footer"></footer>
     </div>
