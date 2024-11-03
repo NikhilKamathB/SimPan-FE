@@ -1,3 +1,5 @@
+@use "../../styles/_variables.scss" as *;
+
 .theme_container {
     display: flex;
     align-items: center;
@@ -15,7 +17,7 @@
 
 .theme_button_container {
     position: absolute;
-    transition: all 0.3s ease;
+    transition: all $default-transition-duration ease;
 
     &.light {
         &.sun {
@@ -33,13 +35,11 @@
         &.sun {
             opacity: 0;
             transform: translate(-50%, -50%) rotate(360deg);
-            color: var(--accent-color);
         }
 
         &.moon {
             opacity: 1;
             transform: translate(-50%, -50%) rotate(0deg);
-            color: var(--primary-color);
         }
     }
 }

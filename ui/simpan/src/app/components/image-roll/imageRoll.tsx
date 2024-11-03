@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
 import Image from 'next/image';
+import React, { useState, useEffect } from "react";
 import styles from "./imageRoll.module.scss";
 
 interface ImageRollProps {
@@ -29,7 +29,7 @@ export default function ImageRoll({ className, src, alt, width, height }: ImageR
   }, []);
   // Render component
   return (
-    <div className={`${className} ${styles.container}`}>
+    <div className={`${className} ${styles.image_container}`}>
       <div className={`${styles.image_wrapper} ${isVisible ? styles.visible : ""} ${shouldScale ? styles.bounce : ""}`}>
         <Image src={src} alt={alt} width={width} height={height} style={{ objectFit: "contain" }} />
       </div>

@@ -1,0 +1,24 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin smoothBounce($name: smoothBounce) {
+    @keyframes #{$name} {
+        0% {
+            transform: scale(1) rotate(0deg);
+            animation-timing-function: cubic-bezier(0.28, 0.44, 0.49, 1);
+        }
+
+        50% {
+            transform: scale(1.6) rotate(0deg);
+            animation-timing-function: cubic-bezier(0.53, 0.01, 0.36, 1.63);
+        }
+
+        100% {
+            transform: scale(1.5) rotate(0deg);
+            animation-timing-function: cubic-bezier(0.28, 0.44, 0.49, 1);
+        }
+    }
+}

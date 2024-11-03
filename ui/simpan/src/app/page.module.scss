@@ -1,11 +1,12 @@
-@mixin flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@use "./styles/_mixins.scss" as *;
+@use "./styles/_variables.scss" as *;
+
+.main_container {
+    height: 100vh;
 }
 
 .main_content {
-    height: 100vh;
+    height: 100%;
 
     &_grid {
         height: 100%;
@@ -15,8 +16,7 @@
     &_col_2 {
         height: 100%;
         @include flex-center;
-        border-left: var(--default-border-thickness) solid var(--mui-palette-primary-main);
-        border-radius: 1rem 0 0 1rem;
+        border-left: $default-border-thin-thickness solid var(--mui-palette-primary-main);
     }
 
     &_nav {
@@ -30,15 +30,16 @@
 
 .main_content_nav_login:hover,
 .main_content_nav_theme_switch:hover {
-    scale: 1.1;
+    scale: $default-scale-hover;
     cursor: pointer;
-    transition: all 0.2s ease-out;
+    transition: all $default-transition-duration ease-out;
 }
 
 .main_content_card {
     width: 75%;
-    border-radius: 1rem;
-    transition: 'all 0.5s ease-out';
+    border-radius: $default-border-radius;
+    box-shadow: 0 0 $default-box-shadow-size 0 var(--mui-palette-primary-light);
+    transition: all $default-transition-duration ease-out;
 
     &_hidden {
         opacity: 0;

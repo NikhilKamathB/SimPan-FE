@@ -100,6 +100,6 @@ export const MaterialThemeProvider: React.FC<{ children: React.ReactNode }> = ({
 };
 
 // Custom hook to use the theme context
-export const useTheme = () => {
+export const useTheme = (): ThemeContextType => {
     return useContext(ThemeContext);
 };

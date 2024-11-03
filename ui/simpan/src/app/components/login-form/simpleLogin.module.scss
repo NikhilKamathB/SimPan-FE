@@ -1,0 +1,27 @@
+@use "../../styles/_mixins.scss" as *;
+@use "../../styles/_variables.scss" as *;
+
+
+.login_container {
+    height: 100vh;
+    overflow: hidden;
+    @include flex-center;
+}
+
+.login_card {
+    width: 50%;
+    min-width: 25%;
+    padding: 2rem;
+    border-radius: $default-border-radius;
+    box-shadow: 0 0 $default-box-shadow-size 0 var(--mui-palette-primary-light);
+
+    &_hidden {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    &_visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

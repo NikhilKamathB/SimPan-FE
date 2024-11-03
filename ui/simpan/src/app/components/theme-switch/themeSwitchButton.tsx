@@ -19,10 +19,10 @@ export default function ThemeSwitchButton({ className, isDarkMode, color, toggle
             <button className={styles.theme_button}
                 onClick={toggleTheme} >
                 <div className={`${styles.theme_button_container} ${isDarkMode ? styles.dark : styles.light} ${styles.sun}`}>
-                    <Sun className={styles.sun} color={color} />
+                    <Sun className={styles.sun} color={color}/>
                 </div>
                 <div className={`${styles.theme_button_container} ${isDarkMode ? styles.dark : styles.light} ${styles.moon}`}>
-                    <Moon className={styles.moon} color={color} />
+                    <Moon className={styles.moon} color={color}/>
                 </div>
             </button>
         </div>

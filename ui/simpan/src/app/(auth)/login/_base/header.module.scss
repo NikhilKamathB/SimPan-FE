@@ -1,0 +1,7 @@
+@use '@/app/styles/_variables.scss' as *;
+
+.nav_theme_switch:hover {
+    scale: $default-scale-hover;
+    cursor: pointer;
+    transition: all $default-transition-duration ease-out;
+}
