@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Providers } from "./providers";
+
 import "./global.scss";
+import { Providers } from "./providers";
+
 
 export const metadata: Metadata = {
   title: "SimPan",
   description: "SimPan welcome page",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+
+export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
+
   return (
     <html lang="en">
       <body>
@@ -21,4 +21,5 @@ export default function RootLayout({
       </body>
     </html>
   );
+
 }

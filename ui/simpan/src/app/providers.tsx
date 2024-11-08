@@ -1,16 +1,21 @@
 "use client";
 
 import React from 'react';
-import { MaterialThemeProvider } from './globalTheme';
+import { Provider } from "react-redux";
+import CssBaseline from '@mui/material/CssBaseline';
+import ThemeWrapper from './theme';
+import { store } from "@/state/store";
+
 
 export function Providers({ children }: { children: React.ReactNode }) {
-    // This component handles:
-    // - Theme switching
+
     return (
-        <MaterialThemeProvider>
-            <div className="main_provider">
+        <Provider store={store}>
+            <ThemeWrapper>
+                <CssBaseline />
                 {children}
-            </div>
-        </MaterialThemeProvider>
+            </ThemeWrapper>
+        </Provider>
     );
+    
 }

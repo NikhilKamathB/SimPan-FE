@@ -1,11 +1,11 @@
-@use "./styles/_mixins.scss" as *;
-@use "./styles/_variables.scss" as *;
+@use "@/styles/_mixins.scss" as *;
+@use "@/styles/_variables.scss" as *;
 
-.main_container {
+.home_container {
     height: 100vh;
 }
 
-.main_content {
+.home_content {
     height: 100%;
 
     &_grid {
@@ -28,14 +28,14 @@
     }
 }
 
-.main_content_nav_login:hover,
-.main_content_nav_theme_switch:hover {
+.home_content_nav_login:hover,
+.home_content_nav_theme_switch:hover {
     scale: $default-scale-hover;
     cursor: pointer;
     transition: all $default-transition-duration ease-out;
 }
 
-.main_content_card {
+.home_content_card {
     width: 75%;
     border-radius: $default-border-radius;
     box-shadow: 0 0 $default-box-shadow-size 0 var(--mui-palette-primary-light);
@@ -52,12 +52,12 @@
     }
 }
 
-.main_content_card_header,
-.main_content_card_button {
+.home_content_card_header,
+.home_content_card_button {
     background-color: var(--mui-palette-primary-light);
 }
 
-.main_content_card_actions {
+.home_content_card_actions {
     margin-bottom: 1rem;
     justify-content: center;
 }
