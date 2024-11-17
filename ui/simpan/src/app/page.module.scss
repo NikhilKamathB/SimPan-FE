@@ -1,6 +1,13 @@
 @use "@/styles/_mixins.scss" as *;
 @use "@/styles/_variables.scss" as *;
 
+.home_nav_login:hover,
+.home_nav_theme_switch:hover {
+    scale: $default-scale-hover;
+    cursor: pointer;
+    transition: all $default-transition-duration ease-out;
+}
+
 .home_container {
     height: 100vh;
 }
@@ -18,21 +25,6 @@
         @include flex-center;
         border-left: $default-border-thin-thickness solid var(--mui-palette-primary-main);
     }
-
-    &_nav {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        flex-direction: row;
-        @include flex-center;
-    }
-}
-
-.home_content_nav_login:hover,
-.home_content_nav_theme_switch:hover {
-    scale: $default-scale-hover;
-    cursor: pointer;
-    transition: all $default-transition-duration ease-out;
 }
 
 .home_content_card {
