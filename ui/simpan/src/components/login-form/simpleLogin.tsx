@@ -10,9 +10,8 @@ import CardActions from '@mui/material/CardActions';
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './simpleLogin.module.scss';
 
-export default function SimpleLogin(): React.ReactElement {
 
-    // This component is used to render a simple login form with email and password fields
+export default function SimpleLogin(): React.ReactElement {
 
     const email = useRef<HTMLInputElement>(null);
     const password = useRef<HTMLInputElement>(null);

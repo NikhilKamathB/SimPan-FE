@@ -3,11 +3,11 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import styles from './header.module.scss';
+import { toggleTheme } from '@/state/theme/themeSlice';
 import SimpleAppBar from '@/components/appbar/simpleAppbar';
 import ThemeSwitchButton from '@/components/theme-switch/themeSwitchButton';
 import { useAppSelector, useAppDispatch } from '@/hooks/manager';
-import { toggleTheme } from '@/state/theme/themeSlice';
-import styles from './header.module.scss';
 
 
 export default function LoginHeader() {
@@ -16,7 +16,7 @@ export default function LoginHeader() {
     const isDarkMode = useAppSelector(state => state.theme.isDarkMode);
 
     return (
-        <SimpleAppBar position="fixed">
+        <SimpleAppBar position="fixed" placementFixed>
             <Typography variant="h6">SimPan</Typography>
             <Box sx={{ flexGrow: 1 }} />
             <Box sx={{ display: "flex", justifyContent: "flex-end", alignItems: "center", gap: "1rem" }}>

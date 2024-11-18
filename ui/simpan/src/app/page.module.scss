@@ -8,21 +8,18 @@
     transition: all $default-transition-duration ease-out;
 }
 
-.home_container {
-    height: 100vh;
+.home_grid {
+    height: 100%;
 }
 
 .home_content {
-    height: 100%;
 
-    &_grid {
-        height: 100%;
+    &_col_1,
+    &_col_2 {
         @include flex-center;
     }
 
     &_col_2 {
-        height: 100%;
-        @include flex-center;
         border-left: $default-border-thin-thickness solid var(--mui-palette-primary-main);
     }
 }

@@ -16,13 +16,10 @@ interface ImageRollProps {
 
 export default function ImageRoll({ className, src, alt, width, height }: ImageRollProps): React.ReactElement {
 
-  // This component is used to display the image: animate the image from left to right rolling
-  // and then scale up using bounce effect
-  
   const leftToRightTime: number = 500;
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [shouldScale, setShouldScale] = useState<boolean>(false);
-  
+
   useEffect((): (() => void) => {
     setIsVisible(true);
     const scaleTimer: NodeJS.Timeout = setTimeout(() => {

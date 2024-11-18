@@ -7,7 +7,7 @@ export default function LoginPage(): React.ReactElement {
     return (
         <>
             <LoginHeader />
-            <SimpleLogin />
+            <h1>Hello, World!</h1>
         </>
     );
     

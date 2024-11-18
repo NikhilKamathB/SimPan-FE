@@ -6,11 +6,12 @@ import Toolbar from "@mui/material/Toolbar";
 
 interface SimpleAppBarProps {
     position?: "static" | "fixed" | "absolute" | "sticky";
+    placementFixed?: boolean;
     children?: React.ReactNode;
 }
 
 
-export default function SimpleAppBar({ position, children }: SimpleAppBarProps) {
+export default function SimpleAppBar({ position, placementFixed, children }: SimpleAppBarProps) {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
@@ -19,6 +20,7 @@ export default function SimpleAppBar({ position, children }: SimpleAppBarProps) 
                     {children}
                 </Toolbar>
             </AppBar>
+            {placementFixed && <Toolbar />}
         </Box>
     );
     
